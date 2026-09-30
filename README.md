@@ -5,274 +5,826 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>COMMERCE CLASSES BY KV SIR</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-:root{--navy:#071426;--cyan:#5ee7ff;--blue:#12b9df;--ink:#102033;--muted:#6d7b8b;--soft:#f4f8fb;--line:#dfe7ee;--white:#fff;--shadow:0 18px 55px rgba(8,28,48,.12)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff}a{text-decoration:none;color:inherit}.container{width:min(1180px,calc(100% - 32px));margin:auto}
-header{position:sticky;top:0;z-index:1000;background:rgba(7,20,38,.98);color:#fff;box-shadow:0 5px 25px #0002}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:900}.brand b{color:var(--cyan)}.mark{width:42px;height:42px;border-radius:12px;background:var(--cyan);color:var(--navy);display:grid;place-items:center;font-weight:1000}.navlinks{display:flex;gap:18px;align-items:center}.navlinks a{font-size:10px;font-weight:800;color:#dce7ef}.navlinks a:hover{color:var(--cyan)}button{font:inherit;cursor:pointer}.navBtn,.btn{border:0;border-radius:10px;padding:12px 17px;font-weight:900}.navBtn,.primary{background:var(--cyan);color:var(--navy)}.ghost{background:transparent;color:#fff;border:1px solid #ffffff55}.light{background:#edf3f7;color:var(--navy)}.menu{display:none;border:0;background:none;color:#fff;font-size:28px}
-.hero{background:linear-gradient(135deg,#061326,#0d3651 55%,#13758c);color:#fff;padding:78px 0}.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}.eyebrow{font-size:10px;letter-spacing:2px;font-weight:900;color:#0797ba}.hero .eyebrow{color:var(--cyan)}h1{font-size:clamp(42px,6vw,72px);line-height:1.02;letter-spacing:-3px;margin:12px 0 20px}h1 span{color:var(--cyan)}.hero p{max-width:650px;color:#d4e2ea;line-height:1.8}.actions{display:flex;gap:9px;flex-wrap:wrap;margin:25px 0}.heroImg{position:relative}.heroImg img{width:100%;height:580px;object-fit:cover;border-radius:24px;box-shadow:0 30px 80px #0007}.badge{position:absolute;left:-18px;bottom:25px;background:#fff;color:var(--navy);padding:16px 20px;border-radius:14px;box-shadow:var(--shadow)}.badge small{display:block;color:var(--muted);font-size:9px;margin-top:4px}.stats{display:flex;gap:10px;flex-wrap:wrap}.stats div{border:1px solid #ffffff22;background:#ffffff0d;border-radius:12px;padding:12px 15px}.stats b{display:block;font-size:12px}.stats span{font-size:9px;color:#b9c8d4}
-.section{padding:88px 0}.soft{background:var(--soft)}.two{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}.photo{border-radius:23px;overflow:hidden;box-shadow:var(--shadow);background:#eef3f6}.photo img{width:100%;display:block;max-height:650px;object-fit:cover}h2{font-size:39px;line-height:1.12;letter-spacing:-1.5px;margin:7px 0 17px}.lead{color:var(--muted);line-height:1.85}.features{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}.feature{background:#fff;border:1px solid var(--line);border-radius:15px;padding:16px}.feature b{display:block;font-size:11px}.feature p{font-size:10px;margin:5px 0 0;color:var(--muted)}
-.head{text-align:center;margin-bottom:36px}.head p{font-size:10px;color:var(--muted)}.courses{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:23px;min-height:245px;box-shadow:0 7px 25px #11283b08;display:flex;flex-direction:column;transition:.22s}.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#b8eaf5}.num{width:43px;height:43px;border-radius:12px;background:var(--navy);color:var(--cyan);display:grid;place-items:center;font-size:11px;font-weight:900;margin-bottom:22px}.card h3{font-size:18px;margin:0 0 8px}.card p{color:var(--muted);font-size:10px;line-height:1.7}.open{margin-top:auto;padding-top:20px;color:#008dab;font-size:10px;font-weight:900}
-.portal{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}.mock{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}.mockTop{background:var(--navy);color:#fff;padding:18px;font-size:10px;display:flex;justify-content:space-between}.mockBody{padding:22px;display:flex;gap:12px;align-items:center}.avatar{width:48px;height:48px;border-radius:14px;background:#def9ff;color:#0088a8;display:grid;place-items:center;font-weight:900}.mockBody small{display:block;color:var(--muted);font-size:9px;margin-top:4px}.mockRows{padding:0 22px 22px;display:grid;grid-template-columns:1fr auto;gap:10px;font-size:10px;font-weight:800}.mockRows span:nth-child(even){color:#008aa8}
-.gallery{display:grid;grid-template-columns:1.25fr .875fr .875fr;gap:16px}.gallery figure{margin:0;background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}.gallery img{width:100%;height:390px;object-fit:cover;display:block}.gallery .poster img{object-fit:contain;background:#eee}.gallery figcaption{padding:13px;font-size:10px;font-weight:900}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:45px}.form{background:#fff;border:1px solid var(--line);border-radius:20px;padding:27px;box-shadow:var(--shadow)}.form input,.form select,.form textarea,.auth input{width:100%;padding:12px;border:1px solid #d8e1e8;border-radius:9px;margin:0 0 10px;outline:none}.form textarea{min-height:105px;resize:vertical}.info{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.info a{border:1px solid var(--line);border-radius:13px;padding:14px 16px;min-width:180px}.info b{display:block;font-size:9px;color:#008aa8}.info span{font-size:12px}
-footer{background:#050d18;color:#aebdcc;padding:32px 0;font-size:10px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.foot b{color:#fff}
-.modal{position:fixed;inset:0;background:#0009;z-index:3000;display:none;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}.auth{width:min(460px,100%);background:#fff;border-radius:22px;padding:29px;position:relative;box-shadow:0 30px 100px #0007}.close{position:absolute;right:14px;top:7px;border:0;background:none;font-size:30px}.authLogo{width:44px;height:44px;border-radius:12px;background:var(--navy);color:var(--cyan);display:grid;place-items:center;font-weight:900}.auth h2{font-size:27px;margin:15px 0 5px}.auth p{font-size:10px;color:var(--muted)}.tabs{display:flex;gap:7px;margin:18px 0}.tabs button{flex:1;border:0;border-radius:8px;padding:10px;background:#edf2f5;font-weight:900;font-size:10px}.tabs .on{background:var(--cyan)}.note{font-size:9px;color:#82909c;line-height:1.5;margin-top:12px;display:block}.dashboard{position:fixed;right:18px;bottom:18px;z-index:2500;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:15px;padding:14px 16px;font-size:10px;display:none}.dashboard.show{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.dashboard button{border:0;background:var(--navy);color:#fff;border-radius:7px;padding:7px 9px;font-size:9px;font-weight:900}
-.courseModal .auth{width:min(760px,100%);max-height:90vh;overflow:auto}.courseTop{display:grid;grid-template-columns:1fr .7fr;gap:25px;align-items:center}.courseTop img{width:100%;height:300px;object-fit:cover;border-radius:17px}.subject{display:grid;gap:8px;margin-top:20px}.subject div{border:1px solid var(--line);border-radius:10px;padding:12px;font-size:10px;font-weight:900}
-@media(max-width:1050px){.courses{grid-template-columns:repeat(3,1fr)}.heroGrid,.two,.portal,.contact{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.gallery .poster{grid-column:1/-1}.courseTop{grid-template-columns:1fr}}
-@media(max-width:700px){.container{width:min(100% - 24px,1180px)}.menu{display:block}.navlinks{display:none;position:absolute;left:0;right:0;top:72px;background:var(--navy);padding:15px;flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.navlinks a,.navBtn{text-align:center}.hero{padding:55px 0}.heroImg img{height:450px}.section{padding:65px 0}h2{font-size:31px}.features,.courses,.gallery{grid-template-columns:1fr}.gallery .poster{grid-column:auto}.gallery img{height:330px}.stats{display:grid;grid-template-columns:1fr 1fr}.dashboard{left:12px;right:12px;bottom:12px}}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7fb;
+    color:#142033;
+    line-height:1.6;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#071426;
+    box-shadow:0 3px 15px rgba(0,0,0,.2);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    min-height:72px;
+    padding:10px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:white;
+    font-size:18px;
+    font-weight:900;
+}
+
+.logo span{
+    color:#29d6ff;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.nav-links a:hover{
+    color:#29d6ff;
+}
+
+.sign-btn{
+    background:#29d6ff;
+    color:#071426 !important;
+    padding:10px 16px;
+    border-radius:8px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    background:linear-gradient(135deg,#061326,#165279);
+    color:white;
+    padding:70px 20px;
+}
+
+.hero-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 15px;
+    border:1px solid #5fe5ff;
+    color:#5fe5ff;
+    border-radius:30px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-size:clamp(42px,6vw,72px);
+    line-height:1;
+    margin:15px 0 20px;
+}
+
+.blue{
+    color:#29d6ff;
+}
+
+.hero p{
+    color:#dce6ef;
+    font-size:17px;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.btn{
+    display:inline-block;
+    border:none;
+    border-radius:9px;
+    padding:13px 20px;
+    margin:5px;
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+.primary{
+    background:#29d6ff;
+    color:#071426;
+}
+
+.primary:hover{
+    background:#65e5ff;
+}
+
+.outline{
+    color:white;
+    border:1px solid rgba(255,255,255,.5);
+}
+
+.hero-image{
+    width:100%;
+    max-height:620px;
+    object-fit:contain;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+/* ================= COMMON ================= */
+
+.section{
+    padding:80px 20px;
+}
+
+.white{
+    background:white;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.heading{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.heading small{
+    color:#0088aa;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.heading h2{
+    font-size:40px;
+    margin:8px 0;
+}
+
+.heading p{
+    color:#687588;
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:50px;
+    align-items:center;
+}
+
+.teacher-image{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    border-radius:22px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.about-text h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.about-text p{
+    color:#687588;
+    line-height:1.9;
+}
+
+.quote{
+    margin:25px 0;
+    padding:18px;
+    background:#eefbfe;
+    border-left:5px solid #29d6ff;
+    font-weight:bold;
+}
+
+/* ================= COURSES ================= */
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:16px;
+}
+
+.course-card{
+    background:white;
+    border:1px solid #e2e8f0;
+    border-radius:18px;
+    padding:22px 14px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.course-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.course-icon{
+    font-size:35px;
+}
+
+.course-card h3{
+    margin:10px 0 4px;
+}
+
+.course-card p{
+    color:#687588;
+}
+
+.price{
+    color:#087d9d;
+    font-size:28px;
+    font-weight:900;
+    margin:12px;
+}
+
+.course-card ul{
+    list-style:none;
+    color:#687588;
+    font-size:13px;
+    line-height:2;
+    margin-bottom:15px;
+}
+
+/* ================= SUBSCRIPTION ================= */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.step{
+    background:#f8fafc;
+    border:1px solid #e3e9ef;
+    border-radius:18px;
+    padding:28px 20px;
+    text-align:center;
+}
+
+.number{
+    width:45px;
+    height:45px;
+    margin:auto;
+    display:grid;
+    place-items:center;
+    background:#29d6ff;
+    border-radius:50%;
+    font-weight:900;
+    font-size:18px;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+}
+
+.gallery-card{
+    background:white;
+    border-radius:20px;
+    padding:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+}
+
+.gallery-card img{
+    width:100%;
+    height:500px;
+    object-fit:contain;
+    background:#f3f5f7;
+    border-radius:15px;
+}
+
+.gallery-card h3{
+    padding:15px 5px 5px;
+}
+
+/* ================= FEATURES ================= */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.feature{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    border:1px solid #e3e9ef;
+}
+
+.feature h3{
+    margin-bottom:8px;
+}
+
+.feature p{
+    color:#687588;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:20px;
+}
+
+.contact-box{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.contact-box p{
+    margin:18px 0;
+}
+
+.contact-box a{
+    color:#0088aa;
+    text-decoration:none;
+}
+
+form{
+    display:grid;
+    gap:13px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #d8e0e8;
+    border-radius:8px;
+    font-size:15px;
+}
+
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#050d18;
+    color:#b5c0cc;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer strong{
+    color:white;
+}
+
+/* ================= MODAL ================= */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:2000;
+    background:rgba(0,0,0,.75);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-box{
+    width:min(440px,100%);
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    right:18px;
+    top:8px;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.tabs{
+    display:flex;
+    gap:8px;
+    margin:20px 0;
+}
+
+.tabs button{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#edf2f6;
+    font-weight:bold;
+}
+
+.tabs button.active{
+    background:#29d6ff;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1000px){
+
+    .hero-container,
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .course-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .steps{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:650px){
+
+    .navbar{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+    }
+
+    .nav-links a{
+        font-size:11px;
+    }
+
+    .hero{
+        padding:45px 15px;
+    }
+
+    .hero-container{
+        gap:25px;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .section{
+        padding:60px 15px;
+    }
+
+    .heading h2{
+        font-size:30px;
+    }
+
+    .course-grid,
+    .steps,
+    .features,
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .teacher-image,
+    .gallery-card img{
+        height:auto;
+        max-height:600px;
+    }
+}
+
+/* ===== SEPARATE VIEWS + STUDENT ACCOUNT ===== */
+.view{display:none;min-height:calc(100vh - 72px);animation:fadeIn .22s ease}
+.view.active{display:block}
+@keyframes fadeIn{from{opacity:.2;transform:translateY(5px)}to{opacity:1;transform:none}}
+.page-head{background:linear-gradient(135deg,#061326,#165279);color:#fff;padding:55px 20px}
+.page-head h1{font-size:clamp(34px,5vw,58px);margin-bottom:8px}
+.page-head p{color:#dce6ef}
+.nav-link-btn{background:none;border:0;color:#fff;font:inherit;font-weight:bold;cursor:pointer;padding:8px}
+.nav-link-btn:hover{color:#29d6ff}
+.account-layout{display:grid;grid-template-columns:260px 1fr;gap:24px}
+.account-menu{background:#071426;color:#fff;border-radius:18px;padding:15px;height:max-content}
+.account-menu button{width:100%;border:0;background:transparent;color:#fff;text-align:left;padding:13px;border-radius:10px;cursor:pointer;font-weight:bold;margin:2px 0}
+.account-menu button:hover,.account-menu button.active{background:#12304d;color:#29d6ff}
+.account-card{background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:25px;box-shadow:0 8px 25px rgba(0,0,0,.06)}
+.course-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.course-detail{background:#fff;border-radius:22px;padding:30px;box-shadow:0 12px 35px rgba(0,0,0,.08)}
+.course-detail .big-icon{font-size:70px}
+.course-detail ul{margin:18px 0 20px;padding-left:20px;line-height:2}
+.action-row{display:flex;gap:10px;flex-wrap:wrap}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:20px}
+.stat{background:#f4f8fb;border-radius:14px;padding:18px}
+.stat strong{display:block;font-size:25px;color:#087d9d}
+.empty-state{text-align:center;padding:40px 20px;background:#f8fafc;border-radius:15px}
+@media(max-width:800px){.account-layout,.course-detail-grid{grid-template-columns:1fr}.stat-grid{grid-template-columns:1fr}}
 </style>
 </head>
+
 <body>
+<nav>
+ <div class="navbar">
+  <div class="logo">COMMERCE <span>CLASSES BY KV SIR</span></div>
+  <ul class="nav-links">
+   <li><button class="nav-link-btn" onclick="showView('home')">HOME</button></li>
+   <li><button class="nav-link-btn" onclick="showView('about')">ABOUT</button></li>
+   <li><button class="nav-link-btn" onclick="showView('courses')">COURSES</button></li>
+   <li><button class="nav-link-btn" onclick="showView('subscription')">SUBSCRIPTIONS</button></li>
+   <li><button class="nav-link-btn" onclick="showView('gallery')">GALLERY</button></li>
+   <li><button class="nav-link-btn" onclick="showView('contact')">CONTACT</button></li>
+   <li><button class="nav-link-btn sign-btn" id="accountNav" onclick="openAccount()">SIGN IN</button></li>
+  </ul>
+ </div>
+</nav>
 
-<header><div class="container nav">
-  <a class="brand" href="#home"><span class="mark">KV</span><span>COMMERCE CLASSES <b>BY KV SIR</b></span></a>
-  <button class="menu" onclick="toggleNav()">☰</button>
-  <nav class="navlinks" id="navlinks">
-    <a href="#home">HOME</a><a href="#courses">COURSES</a><a href="#about">ABOUT</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a>
-    <button class="navBtn" onclick="openAuth('login')">STUDENT LOGIN</button>
-  </nav>
-</div></header>
-
-<section class="hero" id="home"><div class="container heroGrid">
-  <div><div class="eyebrow">SMART COMMERCE LEARNING</div>
-    <h1>COMMERCE CLASSES<br><span>BY KV SIR</span></h1>
-    <p>Professional guidance for Class XI, Class XII, B.Com, BBA and MBA students with clear concepts, practice, tests and doubt support.</p>
-    <div class="actions"><a class="btn primary" href="#courses">EXPLORE COURSES →</a><button class="btn ghost" onclick="openAuth('signup')">CREATE STUDENT ACCOUNT</button></div>
-    <div class="stats"><div><b>XI–XII</b><span>CBSE / ICSE</span></div><div><b>B.COM</b><span>COLLEGE</span></div><div><b>BBA / MBA</b><span>MANAGEMENT</span></div></div>
+<main id="view-home" class="view active">
+ <section class="hero"><div class="hero-container">
+  <div><span class="badge">PROFESSIONAL COMMERCE EDUCATION</span>
+   <h1>COMMERCE CLASSES<br><span class="blue">BY KV SIR</span></h1>
+   <p>CLASS 11 • CLASS 12 • CBSE • ICSE<br>ACCOUNTS • ECONOMICS • BUSINESS STUDIES<br>HOME TUITION AVAILABLE</p>
+   <button class="btn primary" onclick="showView('courses')">VIEW COURSES</button>
+   <button class="btn outline" onclick="openAccount()">STUDENT ACCOUNT</button>
   </div>
-  <div class="heroImg"><img src="images/kv-sir-professional.jpg" alt="KV SIR"><div class="badge"><b>KV SIR</b><small>COMMERCE EDUCATOR</small></div></div>
-</div></section>
+  <img src="kv-sir-poster.png" class="hero-image" alt="COMMERCE CLASSES BY KV SIR">
+ </div></section>
+ <section class="section white"><div class="container">
+  <div class="heading"><small>QUICK ACCESS</small><h2>EXPLORE THE WEBSITE</h2><p>Open each major section separately.</p></div>
+  <div class="features">
+   <div class="feature"><h3>📚 COURSES</h3><p>Open Class 11, Class 12, B.Com, BBA or MBA separately.</p><button class="btn primary" onclick="showView('courses')">OPEN COURSES</button></div>
+   <div class="feature"><h3>👤 STUDENT ACCOUNT</h3><p>Create an account, sign in and manage your student dashboard.</p><button class="btn primary" onclick="openAccount()">OPEN ACCOUNT</button></div>
+   <div class="feature"><h3>📝 SUBSCRIPTIONS</h3><p>View the course subscription process and enquire.</p><button class="btn primary" onclick="showView('subscription')">OPEN SUBSCRIPTIONS</button></div>
+  </div>
+ </div></section>
+</main>
 
-<section class="section" id="about"><div class="container two">
-  <div class="photo"><img src="images/kv-sir-classroom.png" alt="KV SIR"></div>
-  <div><div class="eyebrow">ABOUT THE CLASSES</div><h2>CONCEPTS FIRST. CONFIDENCE NEXT.</h2>
-    <p class="lead">COMMERCE CLASSES BY KV SIR focuses on making commerce subjects easier through structured lessons, examples, practice and student support.</p>
-    <div class="features">
-      <div class="feature"><b>✓ INDIVIDUAL ATTENTION</b><p>Focused student support.</p></div>
-      <div class="feature"><b>✓ SIMPLE TEACHING METHODS</b><p>Clear explanations.</p></div>
-      <div class="feature"><b>✓ REGULAR TESTS & FEEDBACK</b><p>Practice and progress checks.</p></div>
-      <div class="feature"><b>✓ DOUBT-CLEARING SESSIONS</b><p>Support for difficult topics.</p></div>
+<section id="view-about" class="view">
+ <div class="page-head"><div class="container"><h1>ABOUT US</h1><p>COMMERCE CLASSES BY KV SIR</p></div></div>
+ <section class="section white"><div class="container"><div class="about-grid">
+  <img src="kv-sir-photo.png" class="teacher-image" alt="KV SIR">
+  <div class="about-text"><h2>LEARN COMMERCE WITH KV SIR</h2>
+   <p>OUR TEACHING APPROACH FOCUSES ON CLEAR CONCEPTS, SIMPLE EXPLANATIONS, REGULAR PRACTICE, TESTS, FEEDBACK AND DOUBT-CLEARING SESSIONS.</p>
+   <div class="quote">GIVE YOUR CHILD THE RIGHT LEARNING SUPPORT.</div>
+   <button class="btn primary" onclick="showView('courses')">EXPLORE COURSES</button>
+  </div>
+ </div></div></section>
+</section>
+
+<section id="view-courses" class="view">
+ <div class="page-head"><div class="container"><h1>COURSES</h1><p>Click any course to open its own dedicated page.</p></div></div>
+ <section class="section"><div class="container"><div class="course-grid">
+  <div class="course-card"><div class="course-icon">📘</div><h3>CLASS 11</h3><p>CBSE / ICSE</p><div class="price">₹2,000</div><ul><li>ACCOUNTS</li><li>ECONOMICS</li><li>BUSINESS STUDIES</li></ul><button class="btn primary" onclick="openCourse('class11')">OPEN COURSE</button></div>
+  <div class="course-card"><div class="course-icon">🎓</div><h3>CLASS 12</h3><p>CBSE / ICSE</p><div class="price">₹2,000</div><ul><li>ACCOUNTS</li><li>ECONOMICS</li><li>BUSINESS STUDIES</li></ul><button class="btn primary" onclick="openCourse('class12')">OPEN COURSE</button></div>
+  <div class="course-card"><div class="course-icon">📊</div><h3>B.COM</h3><p>COLLEGE</p><div class="price">₹2,000</div><ul><li>COMMERCE SUBJECTS</li><li>DOUBT SUPPORT</li><li>REGULAR PRACTICE</li></ul><button class="btn primary" onclick="openCourse('bcom')">OPEN COURSE</button></div>
+  <div class="course-card"><div class="course-icon">💼</div><h3>BBA</h3><p>COLLEGE</p><div class="price">₹2,000</div><ul><li>BUSINESS SUBJECTS</li><li>DOUBT SUPPORT</li><li>REGULAR PRACTICE</li></ul><button class="btn primary" onclick="openCourse('bba')">OPEN COURSE</button></div>
+  <div class="course-card"><div class="course-icon">🚀</div><h3>MBA</h3><p>COLLEGE</p><div class="price">₹2,000</div><ul><li>MANAGEMENT SUBJECTS</li><li>DOUBT SUPPORT</li><li>REGULAR PRACTICE</li></ul><button class="btn primary" onclick="openCourse('mba')">OPEN COURSE</button></div>
+ </div></div></section>
+</section>
+
+<section id="view-course" class="view">
+ <div class="page-head"><div class="container"><h1 id="coursePageTitle">COURSE</h1><p id="coursePageSubtitle"></p></div></div>
+ <section class="section"><div class="container"><div class="course-detail-grid">
+  <div class="course-detail"><div class="big-icon" id="courseIcon">📚</div><h2 id="courseDetailTitle"></h2><p id="courseDetailText"></p><div class="price">₹2,000</div><ul id="courseDetailList"></ul>
+   <div class="action-row"><button class="btn primary" onclick="subscribeCurrentCourse()">SUBSCRIBE / ENQUIRE</button><button class="btn" onclick="showView('courses')">← ALL COURSES</button></div>
+  </div>
+  <div class="account-card"><h3>🎓 COURSE AREA</h3><p>This separate course page can contain course videos, notes, tests, assignments and announcements.</p>
+   <div class="stat-grid"><div class="stat"><strong>₹2,000</strong>Subscription</div><div class="stat"><strong>✓</strong>Doubt Support</div><div class="stat"><strong>📝</strong>Practice</div></div>
+   <button class="btn primary" onclick="openAccount()">OPEN STUDENT ACCOUNT</button>
+  </div>
+ </div></div></section>
+</section>
+
+<section id="view-subscription" class="view">
+ <div class="page-head"><div class="container"><h1>SUBSCRIPTIONS</h1><p>Course-wise subscription process.</p></div></div>
+ <section class="section white"><div class="container"><div class="heading"><small>SUBSCRIPTION PROCESS</small><h2>COURSE-WISE SUBSCRIPTION</h2><p>EVERY COURSE IS ₹2,000.</p></div>
+  <div class="steps">
+   <div class="step"><div class="number">1</div><h3>SELECT COURSE</h3><p>CHOOSE YOUR COURSE.</p></div>
+   <div class="step"><div class="number">2</div><h3>SIGN IN</h3><p>CREATE OR USE YOUR STUDENT ACCOUNT.</p></div>
+   <div class="step"><div class="number">3</div><h3>SEND ENQUIRY</h3><p>SHARE STUDENT AND COURSE DETAILS.</p></div>
+   <div class="step"><div class="number">4</div><h3>CONFIRM</h3><p>CONFIRM ENROLLMENT AND PAYMENT DETAILS.</p></div>
+  </div>
+  <div style="text-align:center;margin-top:30px"><button class="btn primary" onclick="showView('contact')">START SUBSCRIPTION</button><button class="btn" onclick="openAccount()">CREATE ACCOUNT</button></div>
+ </div></section>
+</section>
+
+<section id="view-gallery" class="view">
+ <div class="page-head"><div class="container"><h1>GALLERY</h1><p>COMMERCE CLASSES BY KV SIR</p></div></div>
+ <section class="section"><div class="container"><div class="gallery">
+  <div class="gallery-card"><img src="kv-sir-poster.png" alt="COMMERCE CLASSES BY KV SIR POSTER"><h3>COMMERCE CLASSES BY KV SIR</h3></div>
+  <div class="gallery-card"><img src="kv-sir-photo.png" alt="KV SIR"><h3>KV SIR</h3></div>
+ </div></div></section>
+</section>
+
+<section id="view-contact" class="view">
+ <div class="page-head"><div class="container"><h1>CONTACT</h1><p>ANAND NAGAR, BAHODAPUR, GWALIOR</p></div></div>
+ <section class="section"><div class="container"><div class="contact-grid">
+  <div class="contact-box"><h3>CONTACT DETAILS</h3><p>📞 <a href="tel:7987116714">7987116714</a></p><p>📍 ANAND NAGAR, BAHODAPUR, GWALIOR, MADHYA PRADESH</p><p>💰 COURSE PRICE: <strong>₹2,000</strong></p></div>
+  <div class="contact-box"><form onsubmit="sendWhatsApp(event)">
+   <input type="text" id="studentName" placeholder="STUDENT NAME" required>
+   <input type="tel" id="phone" placeholder="PHONE NUMBER" required>
+   <select id="courseName" required><option value="">SELECT COURSE</option><option>CLASS 11 - ₹2,000</option><option>CLASS 12 - ₹2,000</option><option>B.COM - ₹2,000</option><option>BBA - ₹2,000</option><option>MBA - ₹2,000</option></select>
+   <textarea id="enquiry" placeholder="YOUR ENQUIRY" required></textarea>
+   <button type="submit" class="btn primary">SEND ENQUIRY ON WHATSAPP</button>
+  </form></div>
+ </div></div></section>
+</section>
+
+<section id="view-account" class="view">
+ <div class="page-head"><div class="container"><h1>STUDENT ACCOUNT</h1><p id="accountWelcome">Sign in or create your student account.</p></div></div>
+ <section class="section"><div class="container">
+  <div id="authBox" class="account-card" style="max-width:520px;margin:auto">
+   <div class="tabs"><button id="loginTab" class="active" onclick="setAuthMode('login')">SIGN IN</button><button id="signupTab" onclick="setAuthMode('signup')">CREATE ACCOUNT</button></div>
+   <form onsubmit="submitAuth(event)">
+    <input type="text" id="fullName" placeholder="FULL NAME" style="display:none">
+    <input type="email" id="email" placeholder="EMAIL" required>
+    <input type="password" id="password" placeholder="PASSWORD" required>
+    <button class="btn primary" id="authButton" type="submit">SIGN IN</button>
+    <small>Demo account system: data is stored in this browser.</small>
+   </form>
+  </div>
+
+  <div id="dashboard" style="display:none">
+   <div class="account-layout">
+    <div class="account-menu">
+     <button class="active" onclick="accountPanel('dashboardPanel',this)">🏠 Dashboard</button>
+     <button onclick="accountPanel('profilePanel',this)">👤 My Profile</button>
+     <button onclick="accountPanel('coursesPanel',this)">📚 My Courses</button>
+     <button onclick="accountPanel('studyPanel',this)">📝 Study Area</button>
+     <button class="logout-btn" onclick="logout()">↪ Logout</button>
     </div>
+    <div>
+     <div id="dashboardPanel" class="account-card account-panel"><h2>WELCOME, <span id="dashName"></span>!</h2><p>Your student account is active on this browser.</p><div class="stat-grid"><div class="stat"><strong id="courseCount">0</strong>Active Courses</div><div class="stat"><strong>₹2,000</strong>Course Price</div><div class="stat"><strong>✓</strong>Account</div></div></div>
+     <div id="profilePanel" class="account-card account-panel" style="display:none"><h2>MY PROFILE</h2><p><strong>Name:</strong> <span id="profileName"></span></p><p><strong>Email:</strong> <span id="profileEmail"></span></p></div>
+     <div id="coursesPanel" class="account-card account-panel" style="display:none"><h2>MY COURSES</h2><div id="myCourses" class="empty-state">No course selected yet.<br><button class="btn primary" onclick="showView('courses')">BROWSE COURSES</button></div></div>
+     <div id="studyPanel" class="account-card account-panel" style="display:none"><h2>STUDY AREA</h2><p>Course videos, notes, tests and assignments can be connected here.</p><button class="btn primary" onclick="showView('courses')">OPEN COURSES</button></div>
+    </div>
+   </div>
   </div>
-</div></section>
+ </div></section>
+</section>
 
-<section class="section soft" id="courses"><div class="container">
-  <div class="head"><div class="eyebrow">LEARNING PATHS</div><h2>CHOOSE YOUR COURSE</h2><p>CLICK A COURSE TO OPEN ITS COURSE SLIDE.</p></div>
-  <div class="courses" id="coursesGrid"></div>
-</div></section>
-
-<section class="section"><div class="container portal">
-  <div><div class="eyebrow">STUDENT PORTAL</div><h2>ONE ACCOUNT FOR YOUR LEARNING</h2><p class="lead">Create a student account, keep your profile and selected courses together, and access your student dashboard.</p>
-    <div class="actions"><button class="btn primary" onclick="openAuth('signup')">CREATE ACCOUNT</button><button class="btn light" onclick="openAuth('login')">SIGN IN</button></div>
-  </div>
-  <div class="mock"><div class="mockTop"><span>STUDENT DASHBOARD</span><span>●</span></div><div class="mockBody"><div class="avatar">S</div><div><b>MY LEARNING</b><small>COURSES • PROFILE • SUPPORT</small></div></div><div class="mockRows"><span>MY COURSES</span><span>→</span><span>MY PROFILE</span><span>→</span><span>SUPPORT</span><span>→</span></div></div>
-</div></section>
-
-<section class="section soft" id="gallery"><div class="container">
-  <div class="head"><div class="eyebrow">GALLERY</div><h2>COMMERCE CLASSES BY KV SIR</h2></div>
-  <div class="gallery">
-    <figure class="poster"><img src="images/commerce-classes-poster.png" alt="COMMERCE CLASSES BY KV SIR POSTER"><figcaption>COURSE INFORMATION & CLASS DETAILS</figcaption></figure>
-    <figure><img src="images/kv-sir-professional.jpg" alt="KV SIR"><figcaption>KV SIR — PROFESSIONAL PROFILE</figcaption></figure>
-    <figure><img src="images/kv-sir-classroom.png" alt="KV SIR"><figcaption>KV SIR — LEARNING & GUIDANCE</figcaption></figure>
-  </div>
-</div></section>
-
-<section class="section" id="contact"><div class="container contact">
-  <div><div class="eyebrow">CONTACT</div><h2>START YOUR COMMERCE JOURNEY</h2><p class="lead">ANAND NAGAR, BAHODAPUR, GWALIOR</p>
-    <div class="info"><a href="tel:7987116714"><b>PHONE</b><span>7987116714</span></a><a href="https://wa.me/917987116714" target="_blank"><b>WHATSAPP</b><span>SEND AN ENQUIRY</span></a></div>
-  </div>
-  <form class="form" onsubmit="sendWhatsApp(event)"><h3>QUICK ENQUIRY</h3><br>
-    <input id="qname" placeholder="STUDENT NAME" required><input id="qphone" placeholder="PHONE NUMBER" required>
-    <select id="qcourse" required><option value="">SELECT COURSE</option><option>CLASS XI</option><option>CLASS XII</option><option>B.COM</option><option>BBA</option><option>MBA</option></select>
-    <textarea id="qmsg" placeholder="YOUR MESSAGE" required></textarea><button class="btn primary">SEND ON WHATSAPP</button>
-  </form>
-</div></section>
-
-<footer><div class="container foot"><b>COMMERCE CLASSES BY KV SIR</b><span>ANAND NAGAR, BAHODAPUR, GWALIOR</span><span>© 2026</span></div></footer>
-
-<div class="modal" id="authModal"><div class="auth">
-  <button class="close" onclick="closeModal('authModal')">×</button><div class="authLogo">KV</div>
-  <h2 id="authTitle">STUDENT SIGN IN</h2><p id="authSub">ACCESS YOUR STUDENT PORTAL</p>
-  <div class="tabs"><button id="loginTab" class="on" onclick="setMode('login')">SIGN IN</button><button id="signupTab" onclick="setMode('signup')">CREATE ACCOUNT</button></div>
-  <form onsubmit="submitAuth(event)"><input id="authName" placeholder="FULL NAME" style="display:none"><input id="authEmail" type="email" placeholder="EMAIL ADDRESS" required><input id="authPassword" type="password" placeholder="PASSWORD" minlength="6" required><button class="btn primary" style="width:100%" id="authButton">SIGN IN</button></form>
-  <span class="note">GITHUB PAGES DEMO: account data is stored in this browser. For real secure student accounts, connect Firebase Authentication or Supabase.</span>
-</div></div>
-
-<div class="modal courseModal" id="courseModal"><div class="auth">
-  <button class="close" onclick="closeModal('courseModal')">×</button><div id="courseSlide"></div>
-</div></div>
-
-<div class="dashboard" id="dashboard"><span id="welcome"></span><button onclick="logout()">LOG OUT</button><button onclick="openAuth('login')">PROFILE</button></div>
+<footer><strong>COMMERCE CLASSES BY KV SIR</strong><p>© 2026 COMMERCE CLASSES BY KV SIR</p><p>ANAND NAGAR, BAHODAPUR, GWALIOR</p></footer>
 
 <script>
-const courses=[
-{id:"class11",n:"01",title:"CLASS XI",tag:"CBSE / ICSE",subjects:["ACCOUNTANCY","ECONOMICS","BUSINESS STUDIES"],desc:"Build strong fundamentals with structured lessons, examples, practice and doubt support."},
-{id:"class12",n:"02",title:"CLASS XII",tag:"CBSE / ICSE",subjects:["ACCOUNTANCY","ECONOMICS","BUSINESS STUDIES"],desc:"Board-oriented learning with revision, practice and focused support."},
-{id:"bcom",n:"03",title:"B.COM",tag:"COLLEGE COMMERCE",subjects:["ACCOUNTING","ECONOMICS","BUSINESS LAW","BUSINESS STUDIES"],desc:"Concept support for undergraduate commerce subjects and academic preparation."},
-{id:"bba",n:"04",title:"BBA",tag:"BUSINESS & MANAGEMENT",subjects:["MANAGEMENT","MARKETING","BUSINESS STUDIES","COMMERCE"],desc:"Academic support for business and management-focused subjects."},
-{id:"mba",n:"05",title:"MBA",tag:"MANAGEMENT",subjects:["MANAGEMENT","BUSINESS","MARKETING","ACADEMIC SUPPORT"],desc:"Structured academic guidance for management learners."}
-];
+const courses={
+ class11:{title:"CLASS 11",subtitle:"CBSE / ICSE",icon:"📘",text:"Commerce learning for Class 11 with Accounts, Economics and Business Studies.",items:["ACCOUNTS","ECONOMICS","BUSINESS STUDIES"]},
+ class12:{title:"CLASS 12",subtitle:"CBSE / ICSE",icon:"🎓",text:"Focused Class 12 commerce support with Accounts, Economics and Business Studies.",items:["ACCOUNTS","ECONOMICS","BUSINESS STUDIES"]},
+ bcom:{title:"B.COM",subtitle:"COLLEGE",icon:"📊",text:"Commerce subject support with doubt solving and regular practice.",items:["COMMERCE SUBJECTS","DOUBT SUPPORT","REGULAR PRACTICE"]},
+ bba:{title:"BBA",subtitle:"COLLEGE",icon:"💼",text:"Business-focused learning support with practice and doubt solving.",items:["BUSINESS SUBJECTS","DOUBT SUPPORT","REGULAR PRACTICE"]},
+ mba:{title:"MBA",subtitle:"COLLEGE",icon:"🚀",text:"Management subject support with practice and doubt solving.",items:["MANAGEMENT SUBJECTS","DOUBT SUPPORT","REGULAR PRACTICE"]}
+};
+let authMode="login",currentCourse=null,currentUser=null;
 
-function renderCourses(){
- document.getElementById("coursesGrid").innerHTML=courses.map(c=>`
- <button class="card" onclick="openCourse('${c.id}')"><span class="num">${c.n}</span><h3>${c.title}</h3><p>${c.tag}<br>${c.subjects.slice(0,3).join(" • ")}</p><span class="open">OPEN COURSE →</span></button>`).join("");
+function showView(name){
+ document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));
+ const el=document.getElementById("view-"+name);
+ if(el)el.classList.add("active");
+ window.scrollTo({top:0,behavior:"smooth"});
 }
-function openCourse(id){
- const c=courses.find(x=>x.id===id); if(!c)return;
- document.getElementById("courseSlide").innerHTML=`
- <div class="courseTop"><div><div class="eyebrow">COURSE DETAILS</div><h2>${c.title}</h2><p class="lead">${c.desc}</p></div><img src="images/kv-sir-professional.jpg" alt="KV SIR"></div>
- <div class="subject">${c.subjects.map((s,i)=>`<div>${String(i+1).padStart(2,"0")} &nbsp; ${s}</div>`).join("")}</div>
- <div class="actions"><button class="btn primary" onclick="selectCourse('${c.title}')">SELECT THIS COURSE</button><button class="btn light" onclick="closeModal('courseModal')">CLOSE</button></div>`;
- document.getElementById("courseModal").classList.add("show");
-}
-function selectCourse(title){localStorage.setItem("kvSelectedCourse",title);closeModal("courseModal");alert(title+" selected. Please sign in/create your student account to continue.");openAuth("login");}
-function toggleNav(){document.getElementById("navlinks").classList.toggle("open")}
-function closeModal(id){document.getElementById(id).classList.remove("show")}
-let authMode="login";
-function openAuth(mode){document.getElementById("authModal").classList.add("show");setMode(mode)}
-function setMode(mode){
+function openAccount(){showView("account");refreshAccountUI();}
+function setAuthMode(mode){
  authMode=mode;
- document.getElementById("authTitle").textContent=mode==="signup"?"CREATE STUDENT ACCOUNT":"STUDENT SIGN IN";
- document.getElementById("authSub").textContent=mode==="signup"?"CREATE YOUR LEARNING PROFILE":"ACCESS YOUR STUDENT PORTAL";
+ document.getElementById("fullName").style.display=mode==="signup"?"block":"none";
+ document.getElementById("fullName").required=mode==="signup";
  document.getElementById("authButton").textContent=mode==="signup"?"CREATE ACCOUNT":"SIGN IN";
- document.getElementById("authName").style.display=mode==="signup"?"block":"none";
- document.getElementById("loginTab").classList.toggle("on",mode==="login");
- document.getElementById("signupTab").classList.toggle("on",mode==="signup");
+ document.getElementById("loginTab").classList.toggle("active",mode==="login");
+ document.getElementById("signupTab").classList.toggle("active",mode==="signup");
 }
 function submitAuth(e){
  e.preventDefault();
- const email=document.getElementById("authEmail").value.trim().toLowerCase();
- const password=document.getElementById("authPassword").value;
- const name=document.getElementById("authName").value.trim();
- const key="kvStudent_"+email;
+ const email=document.getElementById("email").value.trim().toLowerCase();
+ const password=document.getElementById("password").value;
+ const name=document.getElementById("fullName").value.trim();
+ const key="kvSirAccount_"+email;
  if(authMode==="signup"){
-   if(!name){alert("PLEASE ENTER YOUR FULL NAME.");return}
-   if(localStorage.getItem(key)){alert("ACCOUNT ALREADY EXISTS. PLEASE SIGN IN.");return}
-   localStorage.setItem(key,JSON.stringify({name,email,password,created:new Date().toISOString()}));
-   localStorage.setItem("kvLoggedIn",email); alert("ACCOUNT CREATED SUCCESSFULLY."); closeModal("authModal"); showDashboard();
+  if(!name)return alert("PLEASE ENTER YOUR NAME.");
+  if(localStorage.getItem(key))return alert("ACCOUNT ALREADY EXISTS. PLEASE SIGN IN.");
+  const account={name,email,password,courses:[]};
+  localStorage.setItem(key,JSON.stringify(account));
+  alert("ACCOUNT CREATED SUCCESSFULLY. NOW SIGN IN.");
+  document.getElementById("password").value="";
+  setAuthMode("login");
  }else{
-   const raw=localStorage.getItem(key);
-   if(!raw){alert("ACCOUNT NOT FOUND. PLEASE CREATE AN ACCOUNT FIRST.");return}
-   const u=JSON.parse(raw);
-   if(u.password!==password){alert("INCORRECT PASSWORD.");return}
-   localStorage.setItem("kvLoggedIn",email); alert("WELCOME BACK, "+u.name+"!"); closeModal("authModal"); showDashboard();
+  const saved=localStorage.getItem(key);
+  if(!saved)return alert("ACCOUNT NOT FOUND. PLEASE CREATE AN ACCOUNT FIRST.");
+  const account=JSON.parse(saved);
+  if(account.password!==password)return alert("INCORRECT PASSWORD.");
+  currentUser=account;
+  sessionStorage.setItem("kvSirLoggedIn",email);
+  refreshAccountUI();
+  alert("WELCOME, "+account.name+"!");
  }
 }
-function showDashboard(){
- const email=localStorage.getItem("kvLoggedIn"); if(!email)return;
- const raw=localStorage.getItem("kvStudent_"+email); if(!raw)return;
- const u=JSON.parse(raw); document.getElementById("welcome").textContent="WELCOME, "+u.name.toUpperCase();
- document.getElementById("dashboard").classList.add("show");
+function refreshAccountUI(){
+ const email=sessionStorage.getItem("kvSirLoggedIn");
+ if(!email){currentUser=null;document.getElementById("authBox").style.display="block";document.getElementById("dashboard").style.display="none";document.getElementById("accountNav").textContent="SIGN IN";return;}
+ const saved=localStorage.getItem("kvSirAccount_"+email);
+ if(!saved){sessionStorage.removeItem("kvSirLoggedIn");return refreshAccountUI();}
+ currentUser=JSON.parse(saved);
+ document.getElementById("authBox").style.display="none";
+ document.getElementById("dashboard").style.display="block";
+ document.getElementById("accountWelcome").textContent="Welcome, "+currentUser.name;
+ document.getElementById("dashName").textContent=currentUser.name;
+ document.getElementById("profileName").textContent=currentUser.name;
+ document.getElementById("profileEmail").textContent=currentUser.email;
+ document.getElementById("accountNav").textContent="ACCOUNT";
+ renderCourses();
 }
-function logout(){localStorage.removeItem("kvLoggedIn");document.getElementById("dashboard").classList.remove("show");alert("YOU HAVE BEEN LOGGED OUT.")}
+function logout(){
+ sessionStorage.removeItem("kvSirLoggedIn");currentUser=null;
+ setAuthMode("login");refreshAccountUI();showView("home");
+}
+function accountPanel(id,btn){
+ document.querySelectorAll(".account-panel").forEach(x=>x.style.display="none");
+ document.getElementById(id).style.display="block";
+ document.querySelectorAll(".account-menu button").forEach(x=>x.classList.remove("active"));
+ if(btn)btn.classList.add("active");
+}
+function openCourse(id){
+ currentCourse=id;const c=courses[id];
+ document.getElementById("coursePageTitle").textContent=c.title;
+ document.getElementById("coursePageSubtitle").textContent=c.subtitle;
+ document.getElementById("courseIcon").textContent=c.icon;
+ document.getElementById("courseDetailTitle").textContent=c.title+" COURSE";
+ document.getElementById("courseDetailText").textContent=c.text;
+ document.getElementById("courseDetailList").innerHTML=c.items.map(x=>"<li>"+x+"</li>").join("");
+ showView("course");
+}
+function subscribeCurrentCourse(){
+ if(!currentCourse)return;
+ if(!currentUser){alert("PLEASE SIGN IN OR CREATE A STUDENT ACCOUNT FIRST.");openAccount();return;}
+ const c=courses[currentCourse];
+ if(!currentUser.courses)currentUser.courses=[];
+ if(!currentUser.courses.includes(c.title))currentUser.courses.push(c.title);
+ localStorage.setItem("kvSirAccount_"+currentUser.email,JSON.stringify(currentUser));
+ document.getElementById("courseName").value=c.title+" - ₹2,000";
+ alert(c.title+" added to your student account. Please use Contact to complete the enquiry.");
+ showView("contact");renderCourses();
+}
+function renderCourses(){
+ if(!currentUser)return;
+ const box=document.getElementById("myCourses");
+ const list=currentUser.courses||[];
+ document.getElementById("courseCount").textContent=list.length;
+ if(!list.length){box.innerHTML='No course selected yet.<br><button class="btn primary" onclick="showView(\\'courses\\')">BROWSE COURSES</button>';return;}
+ box.className="";
+ box.innerHTML=list.map(c=>'<div class="account-card" style="margin:10px 0"><strong>'+c+'</strong><p>₹2,000 • Student course</p></div>').join("");
+}
 function sendWhatsApp(e){
  e.preventDefault();
- const name=document.getElementById("qname").value,phone=document.getElementById("qphone").value,course=document.getElementById("qcourse").value,msg=document.getElementById("qmsg").value;
- const text=`Hello KV Sir, I am ${name}. Phone: ${phone}. Course: ${course}. Message: ${msg}`;
- window.open("https://wa.me/917987116714?text="+encodeURIComponent(text),"_blank");
+ const name=document.getElementById("studentName").value;
+ const phone=document.getElementById("phone").value;
+ const course=document.getElementById("courseName").value;
+ const enquiry=document.getElementById("enquiry").value;
+ const message="HELLO KV SIR%0A%0ASTUDENT NAME: "+encodeURIComponent(name)+"%0APHONE: "+encodeURIComponent(phone)+"%0ACOURSE: "+encodeURIComponent(course)+"%0AENQUIRY: "+encodeURIComponent(enquiry);
+ window.open("https://wa.me/917987116714?text="+message,"_blank");
 }
-document.addEventListener("DOMContentLoaded",()=>{renderCourses();showDashboard()});
-window.addEventListener("click",e=>{if(e.target.classList.contains("modal"))e.target.classList.remove("show")});
+window.addEventListener("load",()=>{
+ const email=sessionStorage.getItem("kvSirLoggedIn");
+ if(email)refreshAccountUI();
+});
 </script>
-</body>
-</html>student support.</p>
-      <div class="featureList">
-        <div><span>✓</span><b>INDIVIDUAL ATTENTION</b><small>Focused support for students.</small></div>
-        <div><span>✓</span><b>SIMPLE TEACHING METHODS</b><small>Complex concepts explained clearly.</small></div>
-        <div><span>✓</span><b>REGULAR TESTS & FEEDBACK</b><small>Practice, revision and progress checks.</small></div>
-        <div><span>✓</span><b>DOUBT-CLEARING SESSIONS</b><small>Support when students need it.</small></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section soft" id="courses">
-  <div class="container">
-    <div class="sectionHead">
-      <span class="eyebrow">LEARNING PATHS</span>
-      <h2>CHOOSE YOUR COURSE</h2>
-      <p>CLICK ANY COURSE TO OPEN ITS DEDICATED COURSE PAGE.</p>
-    </div>
-    <div class="courseGrid">
-      <a class="courseCard" href="course.html?course=class11"><span class="courseIcon">01</span><h3>CLASS XI</h3><p>ACCOUNTS • ECONOMICS • BUSINESS STUDIES</p><span class="learn">VIEW COURSE →</span></a>
-      <a class="courseCard" href="course.html?course=class12"><span class="courseIcon">02</span><h3>CLASS XII</h3><p>ACCOUNTS • ECONOMICS • BUSINESS STUDIES</p><span class="learn">VIEW COURSE →</span></a>
-      <a class="courseCard" href="course.html?course=bcom"><span class="courseIcon">03</span><h3>B.COM</h3><p>COMMERCE SUBJECTS • CONCEPT SUPPORT</p><span class="learn">VIEW COURSE →</span></a>
-      <a class="courseCard" href="course.html?course=bba"><span class="courseIcon">04</span><h3>BBA</h3><p>BUSINESS • MANAGEMENT • COMMERCE</p><span class="learn">VIEW COURSE →</span></a>
-      <a class="courseCard" href="course.html?course=mba"><span class="courseIcon">05</span><h3>MBA</h3><p>MANAGEMENT • BUSINESS • ACADEMIC SUPPORT</p><span class="learn">VIEW COURSE →</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container portal">
-    <div>
-      <span class="eyebrow">STUDENT PORTAL</span>
-      <h2>ONE ACCOUNT FOR YOUR LEARNING</h2>
-      <p class="lead">Create a student account to keep your profile, selected course and learning dashboard in one place.</p>
-      <button class="btn primary" onclick="openAuth('signup')">CREATE ACCOUNT</button>
-      <button class="btn light" onclick="openAuth('login')">SIGN IN</button>
-    </div>
-    <div class="portalMock">
-      <div class="mockTop"><span>STUDENT DASHBOARD</span><i>●</i></div>
-      <div class="mockBody"><div class="avatar">S</div><div><b>MY LEARNING</b><small>COURSES • PROFILE • SUPPORT</small></div></div>
-      <div class="mockRows"><span>MY COURSES</span><span>›</span><span>MY PROFILE</span><span>›</span><span>SUPPORT</span><span>›</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="section soft" id="gallery">
-  <div class="container">
-    <div class="sectionHead"><span class="eyebrow">GALLERY</span><h2>COMMERCE CLASSES BY KV SIR</h2></div>
-    <div class="galleryGrid">
-      <div class="galleryItem wide"><img src="commerce-classes-poster.png" alt="COMMERCE CLASSES BY KV SIR POSTER"><div class="galleryCaption">COURSE INFORMATION & CLASS DETAILS</div></div>
-      <div class="galleryItem"><img src="kv-sir-professional.jpg" alt="KV SIR"><div class="galleryCaption">KV SIR</div></div>
-      <div class="galleryItem"><img src="kv-sir-classroom.png" alt="KV SIR"><div class="galleryCaption">LEARNING & GUIDANCE</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="contact">
-  <div class="container contact">
-    <div>
-      <span class="eyebrow">CONTACT</span>
-      <h2>START YOUR COMMERCE JOURNEY</h2>
-      <p class="lead">ANAND NAGAR, BAHODAPUR, GWALIOR</p>
-      <div class="contactCards">
-        <a href="tel:7987116714"><b>PHONE</b><span>7987116714</span></a>
-        <a href="https://wa.me/917987116714" target="_blank"><b>WHATSAPP</b><span>SEND AN ENQUIRY</span></a>
-      </div>
-    </div>
-    <form class="contactForm" onsubmit="sendWhatsApp(event)">
-      <h3>QUICK ENQUIRY</h3>
-      <input id="qName" placeholder="STUDENT NAME" required>
-      <input id="qPhone" placeholder="PHONE NUMBER" required>
-      <select id="qCourse" required><option value="">SELECT COURSE</option><option>CLASS XI</option><option>CLASS XII</option><option>B.COM</option><option>BBA</option><option>MBA</option></select>
-      <textarea id="qMessage" placeholder="YOUR MESSAGE" required></textarea>
-      <button class="btn primary">SEND ON WHATSAPP</button>
-    </form>
-  </div>
-</section>
-</main>
-
-<footer><div class="container footerFlex"><div><b>COMMERCE CLASSES BY KV SIR</b><small>ANAND NAGAR, BAHODAPUR, GWALIOR</small></div><div>© 2026 COMMERCE CLASSES BY KV SIR</div></div></footer>
-
-<div class="modal" id="authModal">
-  <div class="authBox">
-    <button class="close" onclick="closeAuth()">×</button>
-    <div class="authBrand">KV</div>
-    <h2 id="authTitle">STUDENT SIGN IN</h2>
-    <p id="authSub">ACCESS YOUR STUDENT PORTAL</p>
-    <div class="tabs"><button id="tabLogin" class="active" onclick="setAuth('login')">SIGN IN</button><button id="tabSignup" onclick="setAuth('signup')">CREATE ACCOUNT</button></div>
-    <form onsubmit="authSubmit(event)">
-      <input id="authName" placeholder="FULL NAME" style="display:none">
-      <input id="authEmail" type="email" placeholder="EMAIL ADDRESS" required>
-      <input id="authPassword" type="password" placeholder="PASSWORD" minlength="6" required>
-      <button class="btn primary full" id="authButton">SIGN IN</button>
-    </form>
-    <small class="demoNote">DEMO ACCOUNT SYSTEM FOR GITHUB PAGES. FOR PRODUCTION USE, CONNECT FIREBASE/SUPABASE AUTHENTICATION.</small>
-  </div>
-</div>
-
-<script src="app.js"></script>
 </body>
 </html>
